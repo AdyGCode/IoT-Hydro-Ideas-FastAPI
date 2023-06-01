@@ -1,5 +1,6 @@
-from datetime import date
 from pydantic import BaseModel
+
+
 class Movie(BaseModel):
     id = int
     name = str

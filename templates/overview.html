@@ -2,27 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Document</title>
 </head>
 <body>
-<form method="POST" id="updateForm">
-  <div class="row">
-    <div class="col-md-12">
-      <label for="">Movie Name:</label>
-      <input type="text" class="form-control" id="name" />
+<form id="updateForm" method="POST">
+    <div class="row">
+        <div class="col-md-12">
+            <label for="">Movie Name:</label>
+            <input class="form-control" id="name" type="text"/>
+        </div>
+        <div class="col-md-12">
+            <label for="">Description:</label>
+            <textarea class="form-control" id="desc"
+                      rows="5"></textarea>
+        </div>
+        <input id="id" type="hidden" value="{{movie.id}}"/>
+        <div class="col-md-6">
+            <button class="btn btn-info mt-4" type="submit">Update
+            </button>
+        </div>
     </div>
-    <div class="col-md-12">
-      <label for="">Description:</label>
-      <textarea id="desc" rows="5" class="form-control"></textarea>
-    </div>
-    <input type="hidden" id="id" value="{{movie.id}}" />
-    <div class="col-md-6">
-      <button type="submit" class="btn btn-info mt-4">Update</button>
-    </div>
-  </div>
 </form>
 
 

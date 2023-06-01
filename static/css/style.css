@@ -1,17 +1,21 @@
-body{
-    background-color:rgb(236, 234, 232);
+body {
+    background-color: rgb(236, 234, 232);
 }
+
 img {
-   width: 100%;
-   border-radius: 10px;
+    width: 100%;
+    border-radius: 10px;
 }
-.image{
+
+.image {
     width: 30%;
 }
-.details{
+
+.details {
     width: 70%;
     margin: 12px
 }
+
 .card {
     border-radius: 20px;
 }
