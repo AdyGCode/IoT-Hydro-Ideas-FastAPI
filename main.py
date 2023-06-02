@@ -1,12 +1,19 @@
-from fastapi import Depends, FastAPI, Form, Request
+from fastapi import Depends, FastAPI, Request, Form
+from fastapi.responses import HTMLResponse, JSONResponse
+from starlette.responses import RedirectResponse
+from sqlalchemy.orm import Session
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from fastapi import Form
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import HTMLResponse
 from sqlalchemy.orm import Session
 from starlette.responses import JSONResponse, RedirectResponse
 
-import model
+from model import Movie
 import schema
-from database import engine, SessionLocal
+from database import SessionLocal, engine
+import model
 
 app = FastAPI()
 model.Base.metadata.create_all(bind=engine)

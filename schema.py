@@ -8,6 +8,7 @@ class Movie(BaseModel):
     type = str
     url = str
     rating = str
+    data = date
 
     class Config:
         orm_mode = True
